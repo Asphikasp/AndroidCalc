@@ -47,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
     public void onOperationClick(View view){
         Button mButton = (Button)view;
         String op = (String)mOperationField.getText();
-        if (op.isEmpty()) {
+        String newop = (String)mButton.getText();
+        if (newop.equals("C")) {
+            setB(0);
+        } else if (op.isEmpty()) {
             setB(a);
         } else switch (op.charAt(0)){
             case '+':
@@ -64,8 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         setA(0);
-        String newop = (String)mButton.getText();
-        if (newop.equals("="))
+        if (newop.equals("=") || newop.equals("C"))
             mOperationField.setText("");
         else
             mOperationField.setText(mButton.getText());
