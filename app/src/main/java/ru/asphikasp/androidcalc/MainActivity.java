@@ -54,16 +54,16 @@ public class MainActivity extends AppCompatActivity {
             setB(a);
         } else switch (op.charAt(0)){
             case '+':
-                setB(a+b);
+                setB(b+a);
                 break;
             case '-':
-                setB(a-b);
+                setB(b-a);
                 break;
             case '*':
-                setB(a*b);
+                setB(b*a);
                 break;
             case '/':
-                setB(a/b);
+                setB(b/a);
                 break;
         }
         setA(0);
